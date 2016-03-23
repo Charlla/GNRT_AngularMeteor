@@ -1,0 +1,56 @@
+<nav class="top-nav custom-top-nav indigo darken-1">
+    <div class="container">
+        <div class="nav-wrapper" *ng-if="post"><a class="page-title">Post: {{post.name}}</a></div>
+    </div>
+</nav>
+
+<div class="container relative-container" *ng-if="post">
+    <ul class="collection">
+        <li class="collection-item">
+            Name: {{post.name}}
+        </li>
+        <li class="collection-item">
+            Description: {{post.description}}
+        </li>
+        <li class="collection-item">
+            Location: {{post.location}}
+        </li>
+        <li class="collection-item">
+            Status: {{postStatus}}
+        </li>
+    </ul>
+
+    <post-edit id="{{post._id}}"></post-edit>
+    
+    <a class="btn-floating btn-large waves-effect waves-light red right add-button-sec" 
+       (click)="deleteConfirmation()">
+        <i class="material-icons">
+            info_outline
+        </i>
+    </a>
+    
+    <a [router-link]="['/PostList']" 
+       class="btn-floating btn-large waves-effect waves-light indigo darken-4 right add-button-third">
+        <i class="material-icons">
+            view_list
+        </i>
+    </a>
+
+
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal3" class="modal" *ng-if="post">
+    <div class="modal-content">
+        <h4>Delete {{post.name}}</h4>
+        <p>Are you sure that you want to delete {{post.name}} post ?</p>
+    </div>
+    <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" (click)="deletePost()">
+            Agree
+        </button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+          

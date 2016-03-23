@@ -1,0 +1,30 @@
+<nav class="top-nav custom-top-nav indigo darken-1">
+    <div class="container">
+        <div class="nav-wrapper"><a class="page-title">Recent [GNRT_UCCP]</a></div>
+    </div>
+</nav>
+
+<div class="relative-container container">
+    
+    <[GNRT_LCCS]-form></[GNRT_LCCS]-form>
+    
+    <ul class="pagination" *ng-if="pagination.arrayPages">
+        <li class="{{isCurrentPage(page)}}" *ng-for="#page of pagination.arrayPages" (click)="changePage(page)">
+            <a >{{page}}</a>
+        </li>
+    </ul>
+
+    <div class="input-field col s6">
+        <input type="text" [(ng-model)]="search" id="search" (keyup)="searchBindingStart(search)" (keydown)="searchBindingStop()">
+        <label for="search">Search</label>
+    </div>
+    
+    <ul class="collection" *ng-if="[GNRT_LCCP]">
+        
+        <li class="collection-item avatar" *ng-for="#[GNRT_LCCS] of [GNRT_LCCP]">
+            <[GNRT_LCCS]-item [item]="[GNRT_LCCS]"></[GNRT_LCCS]-item>
+        </li>
+
+    </ul>
+
+</div>

@@ -1,0 +1,56 @@
+<nav class="top-nav custom-top-nav indigo darken-1">
+    <div class="container">
+        <div class="nav-wrapper" *ng-if="[GNRT_LCCS]"><a class="page-title">[GNRT_UCCS]: {{[GNRT_LCCS].name}}</a></div>
+    </div>
+</nav>
+
+<div class="container relative-container" *ng-if="[GNRT_LCCS]">
+    <ul class="collection">
+        <li class="collection-item">
+            Name: {{[GNRT_LCCS].name}}
+        </li>
+        <li class="collection-item">
+            Description: {{[GNRT_LCCS].description}}
+        </li>
+        <li class="collection-item">
+            Location: {{[GNRT_LCCS].location}}
+        </li>
+        <li class="collection-item">
+            Status: {{[GNRT_LCCS]Status}}
+        </li>
+    </ul>
+
+    <[GNRT_LCCS]-edit id="{{[GNRT_LCCS]._id}}"></[GNRT_LCCS]-edit>
+    
+    <a class="btn-floating btn-large waves-effect waves-light red right add-button-sec" 
+       (click)="deleteConfirmation()">
+        <i class="material-icons">
+            info_outline
+        </i>
+    </a>
+    
+    <a [router-link]="['/[GNRT_UCCS]List']" 
+       class="btn-floating btn-large waves-effect waves-light indigo darken-4 right add-button-third">
+        <i class="material-icons">
+            view_list
+        </i>
+    </a>
+
+
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal3" class="modal" *ng-if="[GNRT_LCCS]">
+    <div class="modal-content">
+        <h4>Delete {{[GNRT_LCCS].name}}</h4>
+        <p>Are you sure that you want to delete {{[GNRT_LCCS].name}} [GNRT_LCCS] ?</p>
+    </div>
+    <div class="modal-footer">
+        <button class=" modal-action modal-close waves-effect waves-green btn-flat" (click)="delete[GNRT_UCCS]()">
+            Agree
+        </button>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+          
