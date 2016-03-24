@@ -1,8 +1,6 @@
 /// <reference path="../typings/angular2-meteor.d.ts" />
 
-import {Posts} from 'collections/Posts';
 /*GNRT_IMPORT_COLLECTION*/
-import './posts';
 /*GNRT_IMPORT_SERVER*/
 
 Meteor.startup(function() {
