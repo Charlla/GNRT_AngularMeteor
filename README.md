@@ -1,4 +1,6 @@
 # GNRT_AngularMeteor
+Project Page: http://charlla.github.io/GNRT_AngularMeteor
+
 ## A generator based on AngularMeteor 
 http://www.angular-meteor.com/
 
