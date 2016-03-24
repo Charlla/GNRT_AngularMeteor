@@ -1,0 +1,6 @@
+{
+  "name": "GNRT AngularMeteor",
+  "tagline": "A GeNeRaTor for AngularMeteor",
+  "body": "### Welcome to GNRT_AngularMeteor\r\n\r\nAngularMeteor is an awesome way of building full-stack, real-time, reactive and mobile ready apps.\r\nhttp://www.angular-meteor.com\r\n\r\nI love working with it, and as such have created a generator for some of the recursive tasks which I encounter.\r\n\r\nThe templates are currently based on Angular 2. I will be creating templates for AngularJS as well.\r\n\r\nThe project will evolve and mature, at this point it's pretty basic, but at the same time very useful.\r\n\r\nEnjoy and feel free to contribute. \r\n\r\nLastly, thanks to the Meteor, Angular and AngularMeteor teams. AWESOME WORK!\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
